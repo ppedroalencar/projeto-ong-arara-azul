@@ -1,0 +1,51 @@
+:root {
+
+  /* Cores da identidade visual*/
+  --color-primary: #0077B6;
+  --color-secondary: #00B4D8;
+  --color-accent: #FFD60A;
+
+  /*Cores neutras para fundos e textos*/
+  --color-neutral-1: #FFFFFF;
+  --color-neutral-2: #F8F9FA;
+  --color-neutral-3: #DEE2E6;
+  --color-neutral-4: #6C757D;
+  --color-neutral-5: #212529;
+
+/* Tipografia */
+  --fs-small: 0.875rem;
+  --fs-body: 1rem;
+  --fs-h3: 2rem;
+  --fs-h2: 2.5rem;
+  --fs-h1: 3rem;
+
+/* Espaçamento */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+}
+
+body {
+  background-color: var(--color-neutral-2);
+  color: var(--color-neutral-5);
+  font-size: var(--fs-body);
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+header {padding: var(--spacing-lg);}
+
+main {
+  margin-top: var(--spacing-xl);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  }
+
+main > section {
+  grid-column: span 6;
+}
