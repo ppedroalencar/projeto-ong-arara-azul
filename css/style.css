@@ -38,7 +38,12 @@ h1 {font-size: var(--fs-h1);}
 h2 {font-size: var(--fs-h2);}
 h3 {font-size: var(--fs-h3);}
 
-header {padding: var(--spacing-lg);}
+header {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
 
 main {
   margin-top: var(--spacing-xl);
@@ -49,3 +54,41 @@ main {
 main > section {
   grid-column: span 6;
 }
+
+@media (max-width: 1024px) {
+  header {padding: var(--spacing-md);}
+}
+
+@media (max-width: 768px) {
+  h2 {font-size: 2rem;}
+}
+
+@media (max-width: 600px) {
+  main > section {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {font-size: 2rem;}
+}
+
+@media (min-width: 1440px) {
+  main {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+nav {display: flex; 
+  gap: var(--spacing-md);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+fieldset {display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  }
