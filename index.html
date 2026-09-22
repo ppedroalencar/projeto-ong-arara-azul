@@ -11,9 +11,26 @@
         <h1>ONG Arara Azul</h1>
         <p>A ONG Arara Azul é uma organização dedicada à conservação da natureza e à proteção da fauna brasileira.</p>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="cadastro.html">Cadastro</a>
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a>
+                    <ul>
+                    <li>
+                        <a href="projetos.html#nossos-projetos">Nossos projetos</a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html#voluntariado">Voluntariado</a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html#doacoes">Doações</a>
+                    </li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -36,5 +53,6 @@
     <footer>
         <p>&copy; 2026 ONG Arara Azul. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

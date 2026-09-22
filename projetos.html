@@ -11,17 +11,34 @@
         <h1>ONG Arara Azul</h1>
         <p>A ONG Arara Azul é uma organização dedicada à conservação da natureza e à proteção da fauna brasileira.</p>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="cadastro.html">Cadastro</a>
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a>
+                    <ul>
+                    <li>
+                        <a href="projetos.html#nossos-projetos">Nossos projetos</a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html#voluntariado">Voluntariado</a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html#doacoes">Doações</a>
+                    </li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section id="nossos-projetos">
             <h2>Nossos Projetos</h2>
             <p>Conheça algumas iniciativas desenvolvidas pela ONG Arara Azul para contribuir com a conservação da fauna e educação ambiental.</p>
         </section>
-        <section>
+        <section id="voluntariado">
             <h2>Voluntariado</h2>
             <p>Você pode contribuir com a ONG Arara Azul participando de nossas ações de conservação e educação ambiental.</p>
             <h3>Como participar</h3>
@@ -31,7 +48,7 @@
                 <li>Auxílio em eventos e atividades da ONG.</li>
             </ul>
         </section>
-        <section>
+        <section id="doacoes">
             <h2>Doações</h2>
             <p>As doações ajudam a manter nossos projetos de conservação, educação ambiental e proteção da fauna brasileira.</p>
             <h3>Como contribuir</h3>
@@ -41,5 +58,6 @@
     <footer>
         <p>&copy; 2026 ONG Arara Azul. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
