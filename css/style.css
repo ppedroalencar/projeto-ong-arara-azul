@@ -4,6 +4,8 @@
   --color-primary: #0077B6;
   --color-secondary: #00B4D8;
   --color-accent: #FFD60A;
+  --color-success: #198754;
+  --color-error: #DC3545;
 
   /*Cores neutras para fundos e textos*/
   --color-neutral-1: #FFFFFF;
@@ -98,6 +100,10 @@ fieldset {display: flex;
     display:block;
   }
 
+  nav li ul {
+    display: block;
+  }
+
   nav > ul {
     display: none;
     }
@@ -122,4 +128,70 @@ fieldset {display: flex;
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+form button {
+  background-color: var(--color-primary);
+  color: var(--color-neutral-1);
+  padding: var(--spacing-sm);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-5);
+}
+
+form button:focus {
+  outline: 2px solid var(--color-accent);
+}
+
+form button:active {
+  transform: translateY(2px);
+}
+
+form button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+input:valid {
+  border: 2px solid var(--color-success);
+}
+
+input:user-invalid {
+  border: 2px solid var(--color-error);
+}
+
+.badge {
+  background-color: var(--color-accent);
+  color: var(--color-neutral-5);
+  padding: var(--spacing-xs);
+  border-radius: 4px;
+  font-size: var(--fs-small);
+}
+
+.alert {
+  background-color: var(--color-neutral-3);
+  color: var(--color-neutral-5);
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: var(--color-success);
+  color: var(--color-neutral-1);
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  display: none;
+}
+
+.toast.show {
+  display: block;
 }

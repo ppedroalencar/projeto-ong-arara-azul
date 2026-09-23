@@ -34,3 +34,10 @@ menuToggle.addEventListener("click", () => {
     nav.classList.toggle("menu-open");
 
 });
+
+const form = document.querySelector("form");
+const toast = document.querySelector(".toast");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    toast.classList.add("show");
+}) 
