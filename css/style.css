@@ -49,11 +49,14 @@ header {
 
 main {
   margin-top: var(--spacing-xl);
+}
+
+#conteudo {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  }
+}
 
-main > section {
+#conteudo > section {
   grid-column: span 6;
 }
 
@@ -83,7 +86,11 @@ fieldset {display: flex;
   gap: var(--spacing-sm);
   }
 
-.menu-toggle {
+.cadastro{
+  max-width: 700px;
+  margin: 0 auto;
+}
+  .menu-toggle {
   display: none;
 }
 
@@ -113,7 +120,7 @@ fieldset {display: flex;
   flex-direction: column;
 }  
 
-  main > section {
+  #conteudo > section {
     grid-column: span 12;
   }
 }
