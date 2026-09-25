@@ -202,3 +202,21 @@ input:user-invalid {
 .toast.show {
   display: block;
 }
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--spacing-md);
+
+  background-color: var(--color-primary);
+  color: var(--color-neutral-1);
+
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--fs-body);
+
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: var(--spacing-md);
+}
