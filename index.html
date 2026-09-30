@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>ONG Arara Azul</title>
 </head>
 <body>
-    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
     <header>
         <h1>ONG Arara Azul</h1>
         <p>A ONG Arara Azul é uma organização dedicada à conservação da natureza e à proteção da fauna brasileira.</p>
         <nav>
-            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            <button type="button" id="theme-toggle" aria-label="Alternar entre modo claro e escuro">🌙</button>
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Projetos</a>
@@ -34,14 +35,13 @@
             </ul>
         </nav>
     </header>
-    <main id="conteudo-principal">
-        <div id="conteudo">
+    <main id="conteudo">
         <section>
             <h2>Quem somos</h2>
             <p>A ONG Arara Azul trabalha na preservação da fauna brasileira, promovendo ações de conservação, educação ambiental e conscientização da sociedade.</p>
             <picture>
-                <source srcset="../imagens/arara-azul.webp" type="image/webp">
-                <img src="../imagens/arara-azul.jpg" alt="Duas Araras Azuis em uma árvore" width="300">
+                <source srcset="imagens/arara-azul.webp" type="image/webp">
+                <img src="imagens/arara-azul.jpg" alt="Duas Araras Azuis em uma árvore" width="300">
             </picture>
             
         </section>
@@ -51,11 +51,10 @@
             <p><strong>Telefone:</strong> (83) 91234-5678</p>
             <p><strong>Localização:</strong> João Pessoa - PB</p>
         </section>
-        </div>
     </main>
     <footer>
         <p>&copy; 2026 ONG Arara Azul. Todos os direitos reservados.</p>
     </footer>
-    <script src="../js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>

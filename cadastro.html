@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - ONG Arara Azul</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
     <header>
         <h1>ONG Arara Azul</h1>
         <p>A ONG Arara Azul é uma organização dedicada à conservação da natureza e à proteção da fauna brasileira.</p>
         <nav>
-            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            <button type="button" id="theme-toggle" aria-label="Alternar entre modo claro e escuro">🌙</button>
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Projetos</a>
@@ -33,7 +35,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="conteudo-principal">
         <section class="cadastro">
             <h2>Cadastro de voluntários</h2>
             <p>Preencha seus dados para fazer parte das ações da ONG Arara Azul.</p>
@@ -91,15 +93,12 @@
                 <br>
                 <button type="submit">Enviar cadastro</button>
             </form>
-            <div class="toast">
-                Cadastro enviado com sucesso!
-            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 ONG Arara Azul. Todos os direitos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="../js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
