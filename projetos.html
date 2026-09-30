@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - ONG Arara Azul</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
     <header>
         <h1>ONG Arara Azul</h1>
         <p>A ONG Arara Azul é uma organização dedicada à conservação da natureza e à proteção da fauna brasileira.</p>
         <nav>
-            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            <button type="button" id="theme-toggle" aria-label="Alternar entre modo claro e escuro">🌙</button>
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Projetos</a>
@@ -33,17 +35,18 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="conteudo">
         <section id="nossos-projetos">
             <h2>Nossos Projetos</h2>
             <p>Conheça algumas iniciativas desenvolvidas pela ONG Arara Azul para contribuir com a conservação da fauna e educação ambiental.</p>
+            <div id="lista-projetos"></div>
         </section>
         <section id="voluntariado">
             <h2>Voluntariado
                 <span class="badge">Inscrições abertas</span>
             </h2>
             <p>Você pode contribuir com a ONG Arara Azul participando de nossas ações de conservação e educação ambiental.</p>
-            <div class="alert">As incrições estão abertas</div>
+            <div class="alert">As inscrições estão abertas.</div>
             <h3>Como participar</h3>
             <ul>
                 <li>Apoio em ações de educação ambiental.</li>
@@ -55,12 +58,12 @@
             <h2>Doações</h2>
             <p>As doações ajudam a manter nossos projetos de conservação, educação ambiental e proteção da fauna brasileira.</p>
             <h3>Como contribuir</h3>
-            <p>Você pode apoiar nossas ações através de contribuições financeiras ou da doação de materiais destinados a manutenção dos projetos da ONG.</p>
+            <p>Você pode apoiar nossas ações através de contribuições financeiras ou da doação de materiais destinados à manutenção dos projetos da ONG.</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 ONG Arara Azul. Todos os direitos reservados.</p>
     </footer>
-    <script src="../js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
