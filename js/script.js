@@ -4,14 +4,23 @@ configurarValidacoes();
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
-menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("menu-open");
 
-});
+if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+        const menuAberto = nav.classList.toggle("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", menuAberto);
+        menuToggle.setAttribute(
+            "aria-label",
+            menuAberto
+                ? "Fechar menu de navegação"
+                : "Abrir menu de navegação"
+        );
+    });
+}
 
 const form = document.querySelector("form");
-const toast = document.querySelector(".toast");
-if (form && toast) {
+if (form) {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const dadosCadastro = {
@@ -72,71 +81,42 @@ projetos.forEach((projeto) => {
     `;
 });
 
-const conteudo = document.getElementById("conteudo");
-function renderizarPagina(html) {
-    conteudo.innerHTML = html;
+const listaProjetos = document.getElementById("lista-projetos");
+
+if (listaProjetos) {
+    listaProjetos.innerHTML = htmlProjetos;
 }
-if (conteudo) {
-    const links = document.querySelectorAll("nav a");
-    links.forEach((link) => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const rota = link.getAttribute("href");
-            const partes = rota.split("#");
-            const pagina = partes[0];
-            switch (pagina) {
-                case "index.html":
-                    renderizarPagina(`
-                        <section>
-            <h2>Quem somos</h2>
-            <p>A ONG Arara Azul trabalha na preservação da fauna brasileira, promovendo ações de conservação, educação ambiental e conscientização da sociedade.</p>
-            <picture>
-                <source srcset="../imagens/arara-azul.webp" type="image/webp">
-                <img src="../imagens/arara-azul.jpg" alt="Duas Araras Azuis em uma árvore" width="300">
-            </picture>
-            
-        </section>
-        <section>
-            <h2>Entre em contato</h2>
-            <p><strong>E-mail:</strong> contato@ongararazul.org</p>
-            <p><strong>Telefone:</strong> (83) 91234-5678</p>
-            <p><strong>Localização:</strong> João Pessoa - PB</p>
-        </section>`);
-                    break;
 
-                case "projetos.html":
-                    renderizarPagina(`
-                        <section id="nossos-projetos">
-            <h2>Nossos Projetos</h2>
-            <p>Conheça algumas iniciativas desenvolvidas pela ONG Arara Azul para contribuir com a conservação da fauna e educação ambiental.</p>
-            ${htmlProjetos}
-        </section>
-        <section id="voluntariado">
-            <h2>Voluntariado
-                <span class="badge">Inscrições abertas</span>
-            </h2>
-            <p>Você pode contribuir com a ONG Arara Azul participando de nossas ações de conservação e educação ambiental.</p>
-            <div class="alert">As incrições estão abertas</div>
-            <h3>Como participar</h3>
-            <ul>
-                <li>Apoio em ações de educação ambiental.</li>
-                <li>Participação em campanhas de conscientização.</li>
-                <li>Auxílio em eventos e atividades da ONG.</li>
-            </ul>
-        </section>
-        <section id="doacoes">
-            <h2>Doações</h2>
-            <p>As doações ajudam a manter nossos projetos de conservação, educação ambiental e proteção da fauna brasileira.</p>
-            <h3>Como contribuir</h3>
-            <p>Você pode apoiar nossas ações através de contribuições financeiras ou da doação de materiais destinados a manutenção dos projetos da ONG.</p>
-        </section>`);
-                    break;
+const themeToggle = document.getElementById("theme-toggle");
+const html = document.documentElement;
 
-                case "cadastro.html":
-                    console.log("Rota: Cadastro");
-                    break;
+function aplicarTema(tema) {
+    if (tema === "dark") {
+        html.setAttribute("data-theme", "dark");
+    } else {
+        html.removeAttribute("data-theme");
+    }
 
-            }
-        });
+    if (themeToggle) {
+        const temaEscuro = tema === "dark";
+
+        themeToggle.textContent = temaEscuro ? "☀️" : "🌙";
+        themeToggle.setAttribute(
+            "aria-label",
+            temaEscuro ? "Ativar modo claro" : "Ativar modo escuro"
+        );
+    }
+}
+
+const temaSalvo = localStorage.getItem("tema");
+aplicarTema(temaSalvo);
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        const temaAtual = html.getAttribute("data-theme");
+        const novoTema = temaAtual === "dark" ? "light" : "dark";
+
+        localStorage.setItem("tema", novoTema);
+        aplicarTema(novoTema);
     });
 }
