@@ -1,0 +1,26 @@
+{
+  "name": "projeto-ong",
+  "version": "1.0.0",
+  "description": "Website de uma ONG fictícia com formulário de cadastro para voluntários",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppedroalencar/projeto-ong-arara-azul.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ppedroalencar/projeto-ong-arara-azul/issues"
+  },
+  "homepage": "https://github.com/ppedroalencar/projeto-ong-arara-azul#readme",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}
